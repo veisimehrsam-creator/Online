@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>تیک‌تاک‌تو آنلاین</title>
+<style>
+  body { font-family: Tahoma; text-align: center; margin-top: 20px; }
+  #board { display: grid; grid-template-columns: repeat(3, 100px); gap: 5px; margin: 20px auto; }
+  .cell { width: 100px; height: 100px; background: #eee; font-size: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 10px; }
+  .cell:hover { background: #ddd; }
+</style>
+</head>
+<body>
+  <h1>❌⭕ تیک‌تاک‌تو آنلاین</h1>
+  <input id="roomInput" placeholder="نام اتاق">
+  <button onclick="joinRoom()">ورود</button>
+  <p id="info"></p>
+  <div id="board"></div>
+  <p id="status"></p>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
